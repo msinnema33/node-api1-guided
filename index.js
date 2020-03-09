@@ -26,5 +26,9 @@ server.post('/api/lessons', (req, res) => {
     res.status(201).json(lessonInfo);
 })
 
+server.get('/api/lessons', (req, res) => {
+    res.status(200).json(lessons);
+})
+
 const PORT = 5000;
 server.listen((PORT), () => console.log(`\n ** API running on http://localhost:${PORT} **\n`));
